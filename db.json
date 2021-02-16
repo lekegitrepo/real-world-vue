@@ -107,6 +107,24 @@
       "date": "",
       "time": "",
       "attendees": []
+    },
+    {
+      "id": 2651867,
+      "user": {
+        "id": "xw8k",
+        "name": "John Smith"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "xw8k",
+        "name": "John Smith"
+      },
+      "title": "Learning programming",
+      "description": "Learning how to programme in Vue",
+      "location": "Remote",
+      "date": "2021-02-19T16:25:00.000Z",
+      "time": "10:00",
+      "attendees": []
     }
   ]
 }
