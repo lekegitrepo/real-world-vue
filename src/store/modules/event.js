@@ -51,9 +51,6 @@ export const actions = {
     }
   }
 }
-export const modules = {
-  user
-}
 export const getters = {
   getEventById: state => id => {
     return state.events.find(event => event.id === id)
