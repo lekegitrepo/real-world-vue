@@ -15,7 +15,8 @@ export default new Vuex.Store({
       'education',
       'food',
       'community'
-    ]
+    ],
+    events: []
   },
   mutations: {
     ADD_EVENT(state, event) {

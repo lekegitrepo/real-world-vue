@@ -71,6 +71,42 @@
           "name": "Mary Gordon"
         }
       ]
+    },
+    {
+      "id": 5776435,
+      "user": {
+        "id": "xw8k",
+        "name": "John Smith"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "xw8k",
+        "name": "John Smith"
+      },
+      "title": "Learning",
+      "description": "Learning Vue",
+      "location": "Remote",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 9397882,
+      "user": {
+        "id": "xw8k",
+        "name": "John Smith"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "xw8k",
+        "name": "John Smith"
+      },
+      "title": "Learning",
+      "description": "Learning Vue",
+      "location": "Remote",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
