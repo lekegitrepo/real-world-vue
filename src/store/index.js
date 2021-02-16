@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import EventService from '@/services/EventService'
 
 Vue.use(Vuex)
 
@@ -16,7 +17,11 @@ export default new Vuex.Store({
       'community'
     ]
   },
-  mutations: {},
+  mutations: {
+    ADD_EVENT(state, event) {
+      state.events.push(event)
+    }
+  },
   actions: {},
   modules: {},
   getters: {
