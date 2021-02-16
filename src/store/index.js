@@ -31,6 +31,15 @@ export default new Vuex.Store({
       return EventService.postEvent(event).then(() => {
         commit('ADD_EVENT', event)
       })
+    },
+    fetchEvents({ commit }) {
+      EventService.getEvents()
+        .then(resp => {
+          commit('SET_EVENTS', resp.data)
+        })
+        .catch(error => {
+          console.log('There wan an error: ' + error.response)
+        })
     }
   },
   modules: {},
