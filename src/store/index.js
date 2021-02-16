@@ -54,7 +54,7 @@ export default new Vuex.Store({
         })
     },
     fetchEvent({ commit, getters }, id) {
-      var event = getters.getEventById(id)
+      const event = getters.getEventById(id)
 
       if (event) {
         commit('SET_EVENT', event)
