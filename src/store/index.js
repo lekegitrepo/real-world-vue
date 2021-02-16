@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import EventService from '@/services/EventService'
+import * as user from '@/store/modules/user'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    user: { id: 'xw8k', name: 'John Smith' },
     categories: [
       'sustainability',
       'nature',
@@ -69,7 +69,9 @@ export default new Vuex.Store({
       }
     }
   },
-  modules: {},
+  modules: {
+    user
+  },
   getters: {
     getEventById: state => id => {
       return state.events.find(event => event.id === id)
