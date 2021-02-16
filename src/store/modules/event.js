@@ -22,10 +22,24 @@ export const mutations = {
   }
 }
 export const actions = {
-  createEvent({ commit }, event) {
-    return EventService.postEvent(event).then(() => {
-      commit('ADD_EVENT', event)
-    })
+  createEvent({ commit, dispatch }, event) {
+    return EventService.postEvent(event)
+      .then(() => {
+        commit('ADD_EVENT', event)
+        const notification = {
+          type: 'success',
+          message: 'The event was created successfully!'
+        }
+        dispatch('notification/add', notification, { root: true })
+      })
+      .catch(error => {
+        const notification = {
+          type: 'error',
+          message: 'There was a problem creating event: ' + error.message
+        }
+        dispatch('notification/add', notification, { root: true })
+        throw error
+      })
   },
   fetchEvents({ commit, dispatch }, { perPage, page }) {
     EventService.getEvents(perPage, page)
