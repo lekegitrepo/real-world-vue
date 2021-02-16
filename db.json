@@ -125,6 +125,24 @@
       "date": "2021-02-19T16:25:00.000Z",
       "time": "10:00",
       "attendees": []
+    },
+    {
+      "id": 7313452,
+      "user": {
+        "id": "xw8k",
+        "name": "John Smith"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "xw8k",
+        "name": "John Smith"
+      },
+      "title": "Cleaning houses",
+      "description": "Sanitation of the estate.",
+      "location": "Remote",
+      "date": "2021-02-25T17:48:00.000Z",
+      "time": "6:00",
+      "attendees": []
     }
   ]
 }
