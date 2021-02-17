@@ -143,6 +143,37 @@
       "date": "2021-02-25T17:48:00.000Z",
       "time": "6:00",
       "attendees": []
+    },
+    {
+      "id": 2232544,
+      "user": {
+        "id": "xw8k",
+        "name": "John Smith"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "xw8k",
+        "name": "John Smith"
+      },
+      "title": "Planting crops",
+      "description": "Planting different crops for the future",
+      "location": "Miami, Florida",
+      "date": "2021-02-26T08:10:00.000Z",
+      "time": "8:00",
+      "attendees": [
+        {
+          "id": "abc123",
+          "name": "Adam Jahr"
+        },
+        {
+          "id": "ghi789",
+          "name": "Beth Swanson"
+        },
+        {
+          "id": "jkl101",
+          "name": "Mary Gordon"
+        }
+      ]
     }
   ]
 }
