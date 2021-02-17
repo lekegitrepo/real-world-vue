@@ -4,6 +4,7 @@ import EventList from '../views/EventList.vue'
 import EventShow from '../views/EventShow.vue'
 import EventCreate from '../views/EventCreate.vue'
 import PageNotFound from '../views/PageNotFound.vue'
+import NProgress from 'nprogress'
 
 Vue.use(VueRouter)
 
