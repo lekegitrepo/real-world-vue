@@ -5,7 +5,7 @@ import EventShow from '../views/EventShow.vue'
 import EventCreate from '../views/EventCreate.vue'
 import PageNotFound from '../views/PageNotFound.vue'
 import NProgress from 'nprogress'
-import store from './store'
+import store from '@/store'
 
 Vue.use(VueRouter)
 
@@ -21,7 +21,8 @@ const routes = [
     component: EventShow,
     props: true,
     beforeEnter(routeTo, routeFrom, next) {
-      store.dispatch('event/fetchEvent', routeTo.params.id).then(() => {
+      store.dispatch('event/fetchEvent', routeTo.params.id).then(event => {
+        routeTo.params.event = event
         next()
       })
     }
@@ -54,10 +55,12 @@ const router = new VueRouter({
 router.beforeEach((routeTo, routeFrom, next) => {
   NProgress.start()
   next()
+  console.log('Unused variables:', routeTo, routeFrom)
 })
 
 router.afterEach((routeTo, routeFrom, next) => {
   NProgress.done()
+  console.log('Unused variables:', routeTo, routeFrom, next)
 })
 
 export default router
