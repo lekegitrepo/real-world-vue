@@ -45,4 +45,13 @@ const router = new VueRouter({
   routes
 })
 
+router.beforeEach((routeTo, routeFrom, next) => {
+  NProgress.start()
+  next()
+})
+
+router.afterEach((routeTo, routeFrom, next) => {
+  NProgress.done()
+})
+
 export default router
