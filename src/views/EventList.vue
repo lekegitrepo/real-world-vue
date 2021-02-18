@@ -45,11 +45,17 @@ export default {
   },
   beforeRouteEnter(routeTo, routeFrom, next) {
     getPageEvents(routeTo, next)
-    console.log('This unused parameter from eventlist', routeFrom)
+    console.log(
+      'This unused parameter from eventlist beforeRouteEnter',
+      routeFrom
+    )
   },
   beforeRouteUpdate(routeTo, routeFrom, next) {
     getPageEvents(routeTo, next)
-    console.log('This unused parameter from eventlist', routeFrom)
+    console.log(
+      'This unused parameter from eventlist beforeRouteUpdate',
+      routeFrom
+    )
   },
   computed: {
     ...mapState(['event', 'user']),
