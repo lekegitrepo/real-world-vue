@@ -24,22 +24,28 @@
 <script>
 import EventCard from '@/components/EventCard'
 import { mapState } from 'vuex'
+import store from '@/store'
 export default {
+  props: {
+    page: {
+      type: Number,
+      required: true
+    }
+  },
   components: {
     EventCard
   },
-  created() {
-    this.perPage = 3
-    this.$store.dispatch('event/fetchEvents', {
-      perPage: this.perPage,
-      page: this.page
+  beforeRouteEnter(routeTo, routeFrom, next) {
+    const currentPage = parseInt(routeTo.query.page) || 1
+    store.dispatch('event/fetchEvents', { page: currentPage }).then(() => {
+      routeTo.params.page = currentPage
+      next()
     })
+    console.log('This unused parameter from eventlist', routeFrom)
   },
+  beforeRouteUpdate(routeTo, routeFrom, next) {},
   computed: {
     ...mapState(['event', 'user']),
-    page() {
-      return parseInt(this.$route.query.page) || 1
-    },
     hasNextPage() {
       return this.event.eventsTotal > this.page * this.perPage
     }
