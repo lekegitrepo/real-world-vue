@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import EventList from '../views/EventList.vue'
 import EventShow from '../views/EventShow.vue'
 import EventCreate from '../views/EventCreate.vue'
-import PageNotFound from '../views/PageNotFound.vue'
+import PageNotFound from '../views/NotFound.vue'
 import NProgress from 'nprogress'
 import store from '@/store'
 
