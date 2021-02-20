@@ -1,5 +1,4 @@
 import BaseButton from '../../components/Button'
-import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'BaseButton',
