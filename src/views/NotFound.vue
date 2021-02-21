@@ -1,12 +1,19 @@
 <template>
   <div>
-    <h1>Error 404: Page Not Found</h1>
+    <h1>Error 404: {{ resource }} Not Found</h1>
     <router-link :to="{ name: 'events' }">Return to the Home page</router-link>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    resource: {
+      type: String,
+      required: true
+    }
+  }
+}
 </script>
 
 <style></style>
