@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import EventList from '../views/EventList.vue'
 import EventShow from '../views/EventShow.vue'
 import EventCreate from '../views/EventCreate.vue'
-import PageNotFound from '../views/NotFound.vue'
+import NotFound from '../views/NotFound.vue'
 import NProgress from 'nprogress'
 import store from '@/store'
 
@@ -34,18 +34,14 @@ const routes = [
     component: EventCreate
   },
   {
+    path: '/404',
+    name: '404',
+    component: NotFound
+  },
+  {
     path: '*',
-    component: PageNotFound
+    redirect: { name: '404' }
   }
-  // {
-  //   path: "/event",
-  //   name: "Event",
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () =>
-  //     import(/* webpackChunkName: "about" */ "../views/About.vue")
-  // }
 ]
 
 const router = new VueRouter({
