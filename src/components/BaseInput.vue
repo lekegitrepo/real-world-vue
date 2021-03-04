@@ -1,5 +1,8 @@
 <template>
-  <div></div>
+  <div>
+    <label v-if="label">{{ label }}</label>
+    <input type="text" />
+  </div>
 </template>
 
 <script>
