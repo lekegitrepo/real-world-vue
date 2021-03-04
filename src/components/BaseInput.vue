@@ -6,7 +6,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    label: {
+      type: String,
+      default: ''
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped></style>
