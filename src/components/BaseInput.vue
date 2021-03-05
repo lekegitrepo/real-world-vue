@@ -1,7 +1,7 @@
 <template>
   <div>
     <label v-if="label">{{ label }}</label>
-    <input type="text" />
+    <input type="text" @input="updateValue" />
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
     label: {
       type: String,
       default: ''
+    }
+  },
+  methods: {
+    updateValue(event) {
+      this.$emit('input', event.target.value)
     }
   }
 }
