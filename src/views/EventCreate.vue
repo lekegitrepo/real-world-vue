@@ -3,7 +3,11 @@
     <h1>Create Event</h1>
     <form @submit.prevent="createEvent">
       <label></label>
-      <BaseSelect label="Select a category" :options="categories" />
+      <BaseSelect
+        label="Select a category"
+        :options="categories"
+        v-model="event.category"
+      />
 
       <h3>Name & describe your event</h3>
       <BaseInput
