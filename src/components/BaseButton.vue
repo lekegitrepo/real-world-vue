@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button>
+    <button v-on="$listeners" class="button">
       <slot />
     </button>
   </div>
@@ -9,3 +9,5 @@
 <script>
 export default {}
 </script>
+
+<style scoped></style>
