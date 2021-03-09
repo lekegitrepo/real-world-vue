@@ -23,7 +23,14 @@
         label="Title"
         v-model="event.title"
         class="field"
+        :class="{ error: $v.event.title.$error }"
+        @blur="$v.event.title.$touch()"
       />
+      <template v-if="$v.event.title.$error">
+        <p v-if="!$v.event.title.required" class="errorMessage">
+          Title is required
+        </p>
+      </template>
 
       <BaseInput
         type="text"
@@ -31,7 +38,14 @@
         label="Description"
         v-model="event.description"
         class="field"
+        :class="{ error: $v.event.description.$error }"
+        @blur="$v.event.description.$touch()"
       />
+      <template v-if="$v.event.description.$error">
+        <p v-if="!$v.event.description.required" class="errorMessage">
+          Description is required
+        </p>
+      </template>
 
       <h3>Where is your event?</h3>
       <BaseInput
@@ -40,7 +54,14 @@
         label="Location"
         v-model="event.location"
         class="field"
+        :class="{ error: $v.event.location.$error }"
+        @blur="$v.event.location.$touch()"
       />
+      <template v-if="$v.event.location.$error">
+        <p v-if="!$v.event.location.required" class="errorMessage">
+          Location is required
+        </p>
+      </template>
 
       <h3>When is your event?</h3>
 
@@ -54,9 +75,15 @@
         :options="times"
         v-model="event.time"
         class="field"
+        :class="{ error: $v.event.time.$error }"
+        @blur="$v.event.time.$touch()"
       />
+      <template v-if="$v.event.time.$error">
+        <p v-if="!$v.event.time.required" class="errorMessage">
+          Time is required
+        </p>
+      </template>
 
-      <!-- <input type="submit" class="button -fill-gradient" value="Submit" /> -->
       <BaseButton type="submit" buttonClass="-fill-gradient">Submit</BaseButton>
     </form>
   </div>
