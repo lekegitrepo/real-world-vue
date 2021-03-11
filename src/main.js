@@ -4,7 +4,14 @@ import router from './router'
 import store from './store'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+import Vuelidate from 'vuelidate'
 import 'nprogress/nprogress.css'
+
+import DateFilter from './filters/date'
+
+Vue.filter('date', DateFilter)
+
+Vue.use(Vuelidate)
 
 const requireComponent = require.context(
   // The relative path of the components folder
